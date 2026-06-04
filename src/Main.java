@@ -4,6 +4,14 @@ public class Main {
         /// Задача 1
         System.out.println("Задача 1");
         byte clientOS1 = 0;
+
+        if (clientOS1 == 0){
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }
+        else if (clientOS1 == 1){
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+        /*
         switch (clientOS1){
             case 0:
                 System.out.println("Установите версию приложения для iOS по ссылке");
@@ -13,23 +21,31 @@ public class Main {
                 break;
             default:
                 System.out.println("Неверно указана ОС");
+
+
         }
+        */
+
+
+
+
+
 
 
         /// Задача 2
         System.out.println("Задача 2");
         byte clientOS2 = 0;
-        short age2 = 2013;
+        short clientDeviceYear = 2013;
         switch (clientOS2){
             case 0:
-                if (age2 < 2015){
+                if (clientDeviceYear < 2015){
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
                 }
                 else
                     System.out.println("Установите версию приложения для iOS по ссылке");
                 break;
             case 1:
-                if (age2 < 2015){
+                if (clientDeviceYear < 2015){
                     System.out.println("Установите облегченную версию приложения для Android по ссылке");
                 }
                 else
