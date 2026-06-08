@@ -11,20 +11,10 @@ public class Main {
         else if (clientOS1 == 1){
             System.out.println("Установите версию приложения для Android по ссылке");
         }
-        /*
-        switch (clientOS1){
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
-            default:
-                System.out.println("Неверно указана ОС");
-
-
+        else {
+            System.out.println("Неизвестная операционная система. Проверьте ввод");
         }
-        */
+
 
 
 
@@ -41,18 +31,20 @@ public class Main {
                 if (clientDeviceYear < 2015){
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
                 }
-                else
+                else {
                     System.out.println("Установите версию приложения для iOS по ссылке");
+                }
                 break;
             case 1:
                 if (clientDeviceYear < 2015){
                     System.out.println("Установите облегченную версию приложения для Android по ссылке");
                 }
-                else
+                else {
                     System.out.println("Установите версию приложения для Android по ссылке");
+                }
                 break;
             default:
-                System.out.println("Неверно указана ОС");
+                System.out.println("Неизвестная операционная система. Проверьте ввод");
         }
 
 
@@ -63,8 +55,9 @@ public class Main {
             if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)){
                 System.out.println(year + " год является високосным");
             }
-            else
+            else {
                 System.out.println(year + " год не является високосным");
+            }
         }
 
 
@@ -84,52 +77,21 @@ public class Main {
             i = i + 3;
             System.out.println("Потребуется дней: " + i);
         }
-        else
+        else {
             System.out.println("Свыше 100 км доставки нет");
+        }
 
 
         /// Задача 5
         System.out.println("Задача 5");
         byte monthNumber = 12;
         switch (monthNumber){
-            case 1:
-                System.out.println("Это зимний месяц");
-                break;
-            case 2:
-                System.out.println("Это зимний месяц");
-                break;
-            case 3:
-                System.out.println("Это весенний месяц");
-                break;
-            case 4:
-                System.out.println("Это весенний месяц");
-                break;
-            case 5:
-                System.out.println("Это весенний месяц");
-                break;
-            case 6:
-                System.out.println("Это летний месяц");
-                break;
-            case 7:
-                System.out.println("Это летний месяц");
-                break;
-            case 8:
-                System.out.println("Это летний месяц");
-                break;
-            case 9:
-                System.out.println("Это осенний месяц");
-                break;
-            case 10:
-                System.out.println("Это осенний месяц");
-                break;
-            case 11:
-                System.out.println("Это осенний месяц");
-                break;
-            case 12:
-                System.out.println("Это зимний месяц");
-                break;
-            default:
-                System.out.println("Ошибка ввода данных");
+            case 1, 2, 12 -> System.out.println("Это зимний месяц");
+            case 3, 4, 5 -> System.out.println("Это весенний месяц");
+            case 6, 7, 8 -> System.out.println("Это летний месяц");
+            case 9, 10, 11 -> System.out.println("Это осенний месяц");
+            default -> System.out.println("Ошибка ввода данных");
         }
+
     }
 }
